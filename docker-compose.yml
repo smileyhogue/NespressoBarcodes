@@ -1,0 +1,14 @@
+services:
+  nespresso-web:
+    image: nespresso-web:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: nespresso-barcodes
+    restart: unless-stopped
+    ports:
+      - "4757:3000"
+    environment:
+      - NODE_ENV=production
+    security_opt:
+      - no-new-privileges:true
