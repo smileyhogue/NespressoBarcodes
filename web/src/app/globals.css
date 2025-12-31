@@ -1,0 +1,23 @@
+/* 
+  Material UI handles baseline styles (CssBaseline).
+  We only need print helpers here.
+*/
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  .only-print {
+    display: block !important;
+  }
+
+  @page {
+    margin: 0.25in;
+    size: auto;
+  }
+
+  body {
+    background: white;
+  }
+}
